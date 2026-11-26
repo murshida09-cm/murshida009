@@ -1,0 +1,59 @@
+I'm in a 3-hour AI hackathon, team of 4. My role: build the frontend.
+
+## Stack
+React (JavaScript, JSX), Vite, plain CSS files (no SCSS/Tailwind), Axios,
+React Router, Lucide React icons. Backend: Python FastAPI.
+
+## How to work
+1. Analyze the requirement below. If anything essential is missing, ask me
+   before building. Don't assume.
+2. Propose the pages, components, and user flows, then a clean project structure.
+3. Build step by step with complete code and file paths. Prioritize a working
+   demo over polish.
+4. Don't invent API endpoints or business logic. Use mock data until I share
+   the API contract, then integrate it via Axios.
+5. Finish with how to run and test the app.
+
+## Theme: NexusAI dark (apply to every page)
+Modern enterprise "AI workspace" look: near-black navy backgrounds,
+cyan-to-blue gradient accents, soft glows, thin low-contrast borders.
+
+Put all tokens as CSS variables in `src/styles/theme.css`. Components must
+use the variables, never hardcoded colors.
+
+--bg-base: #030A12;  --bg-panel: #050D17;  --bg-input: #0A141D;
+--border-subtle: #10304A;  --accent-cyan: #00B8F5;  --accent-blue: #0072C6;
+--gradient-primary: linear-gradient(90deg, #00B4F0, #0072C6);
+--gradient-logo: linear-gradient(135deg, #00C2FF, #0077C8);
+--text-primary: #FFF;  --text-secondary: #8FA3B8;  --text-muted: #6B7F94;
+--glow: radial-gradient(circle, rgba(0,120,180,.25), transparent 65%);
+
+**Type:** Inter or Plus Jakarta Sans. Hero ~64px bold, page titles ~48px
+semi-bold, tight tracking. Eyebrow labels 11-12px uppercase, cyan, wide
+letter-spacing. Body in --text-secondary.
+
+**Logo:** gradient rounded-square with white "N" + wordmark "Nexus" (white)
++ "AI" (cyan). Tagline: "One workspace. Any AI use case."
+
+**Components:** Inputs ~62px tall, 10px radius, --bg-input fill, 1px border,
+cyan border + glow on focus. Primary button: full width, ~54px, gradient,
+white label left, ChevronRight at right, blue glow shadow, with loading and
+disabled states. Links in cyan. Cards, tables, and modals use --bg-panel, 1px
+border, 10-16px radius. Include consistent loading, empty, and error states.
+
+**Login page (build first):** Two-column split, full height.
+- Left (~52%): logo, eyebrow "SECURE AI WORKSPACE", headline "Build, explore
+  and operate with AI.", subtitle "A configurable enterprise shell for
+  conversational and agentic AI experiences.", a CSS/SVG orbital illustration
+  (gradient tile with Sparkle icon, thin circle, two dashed rotating rings),
+  teal glow behind it, and footer badges: Lock "Token authentication",
+  ShieldCheck "Role-based access".
+- Right (~48%, --bg-panel): logo, "Welcome back", "Sign in to continue to
+  your workspace.", Email and Password fields, "Sign in" button, and
+  "New here? Create an account" link. Use a mock login for now.
+
+**Motion/responsive:** Subtle fade-in, 150-200ms transitions. Stack columns
+below 900px and hide the illustration on mobile. Respect reduced-motion.
+
+## Hackathon requirement
+[PASTE THE COMPLETE HACKATHON REQUIREMENT HERE]
